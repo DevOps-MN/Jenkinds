@@ -72,7 +72,7 @@ spec:
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "myweb-deploy.yml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "myweb.yml", kubeconfigId: "mykubeconfig")
         }
       }
     }
