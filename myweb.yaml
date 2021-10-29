@@ -19,6 +19,12 @@ spec:
       - image: km20/pipeline:tagVersion
         imagePullPolicy: Always
         name: myweb
+      - env:
+        - name: VAULT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: jenkins
+              name: vault-pipeline-token
 
 ---
 apiVersion: v1
